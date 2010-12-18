@@ -1,0 +1,27 @@
+<package>
+  <description brief="Simple Python viewer for dynamic-graph.">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/robot-viewer</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://laas.github.com/robot-viewer/doxygen/HEAD/index.html" />
+  </export>
+
+  <rosdep name="sphinx"/>
+  <rosdep name="pyopengl"/>
+
+  <rosdep name="dg-middleware"/>
+
+  <depend package="dg-middleware"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/laas/robot-viewer.git"/>
+</package>
