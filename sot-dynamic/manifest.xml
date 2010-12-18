@@ -19,7 +19,7 @@
   <depend package="jrl-mal"/>
   <depend package="hrp2-dynamics"/>
   <depend package="hrp2-10-optimized"/>
-  <depend package="hrp-10"/>
+  <depend package="hrp2-10"/>
   <depend package="dynamic-graph"/>
   <depend package="sot-core"/>
 
