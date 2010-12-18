@@ -1,0 +1,27 @@
+<package>
+  <description brief="dynamic graph OpenHRP plug-in.">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sot-openhrp</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/sot-openhrp/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+  <rosdep name="omniORB4"/>
+
+  <depend package="jrl-walkgen"/>
+  <depend package="jrl-mal"/>
+  <depend package="sot-core"/>
+  <depend package="hrp2-10"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/sot-openhrp.git"/>
+</package>
