@@ -1,0 +1,24 @@
+<package>
+  <description brief="JRL robot dynamics implementation">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/jrl-dynamics</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/jrl-dynamics/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+
+  <depend package="abstract-robot-dynamics"/>
+  <depend package="jrl-mal"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/jrl-dynamics.git"/>
+</package>
