@@ -1,0 +1,24 @@
+<package>
+  <description brief="Dynamics computation bindings for dynamic-graph">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sot-dynamic</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/sot-dynamic/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+
+  <depend package="dynamic-graph"/>
+  <depend package="jrl-mal"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/sot-dynamic.git"/>
+</package>
