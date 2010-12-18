@@ -21,6 +21,7 @@
   <depend package="sot-dynamic"/>
   <depend package="sot-pattern-generator"/>
   <depend package="dynamic-graph"/>
+  <depend package="dg-middleware"/>
 
   <depend package="hrp2-10"/>
   <depend package="hrp2-14"/>
