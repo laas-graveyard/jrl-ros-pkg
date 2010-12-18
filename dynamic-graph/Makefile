@@ -1,5 +1,5 @@
 GIT_DIR = $(PACKAGE_NAME)
-GIT_URL =git://github.com/jrl-umi3218/dynamic-graph.git
+GIT_URL = git://github.com/jrl-umi3218/dynamic-graph.git
 GIT_REVISION = master
 
 CMAKE_EXTRA_ARGS=

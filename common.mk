@@ -10,6 +10,15 @@ CMAKE_ARGS = -DCMAKE_INSTALL_PREFIX=$(INSTALL_DIR)/ \
              -DBOOST_ROOT=$(BOOST_ROOT)\
              -DCMAKE_BUILD_TYPE="Release"
 
+
+DYNAMIC_GRAPH=$(shell rospack find dynamic-graph)/install/lib/pkgconfig
+DG_MIDDLEWARE=$(shell rospack find dg-middleware)/install/lib/pkgconfig
+JRL_MATHTOOLS=$(shell rospack find jrl-mathtools)/install/lib/pkgconfig
+JRL_MAL=$(shell rospack find jrl-mal)/install/lib/pkgconfig
+
+PKG_CONFIG_PATH=$(DG_MIDDLEWARE):$(DYNAMIC_GRAPH):$(JRL_MAL):$(JRL_MATHTOOLS)
+
+
 all: install
 
 $(GIT_DIR):
