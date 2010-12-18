@@ -14,7 +14,7 @@
        external=
        "http://jrl-umi3218.github.com/dynamic-graph/doxygen/HEAD/index.html" />
   </export>
-  <depend package="boost"/>
+  <rosdep name="boost"/>
   <versioncontrol type="git"
 		  url="git://github.com/jrl-umi3218/dynamic-graph.git"/>
 </package>

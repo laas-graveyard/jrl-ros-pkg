@@ -14,8 +14,8 @@
        external=
        "http://jrl-umi3218.github.com/jrl-mal/doxygen/HEAD/index.html" />
   </export>
-  <depend package="boost"/>
-  <rosdep name="jrl-mathtools"/>
+  <rosdep name="boost"/>
+  <depend package="jrl-mathtools"/>
   <versioncontrol type="git"
 		  url="git://github.com/jrl-umi3218/jrl-mal.git"/>
 </package>
