@@ -1,0 +1,23 @@
+<package>
+  <description brief="JRL humanoid robot pattern generator">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/jrl-walkgen</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/jrl-walkgen/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+  <depend package="abstract-robot-dynamics"/>
+  <depend package="jrl-dynamics"/>
+  <depend package="hrp2-dynamics"/>
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/jrl-walkgen.git"/>
+</package>
