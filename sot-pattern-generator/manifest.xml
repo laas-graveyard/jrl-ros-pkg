@@ -1,0 +1,28 @@
+<package>
+  <description brief="Pattern generator bindings for dynamic-graph.">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sot-pattern-generator</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/sot-pattern-generator/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+
+  <depend package="jrl-walkgen"/>
+  <depend package="jrl-dynamics"/>
+  <depend package="sot-core"/>
+  <depend package="hrp2-dynamics"/>
+  <depend package="hrp2-10-optimized"/>
+  <depend package="hrp2-10"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/sot-pattern-generator.git"/>
+</package>
