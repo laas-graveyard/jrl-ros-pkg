@@ -1,0 +1,14 @@
+<package>
+  <description brief="HRP-2 10 model information">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>Closed source</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+
+  <export>
+  </export>
+</package>
