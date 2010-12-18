@@ -1,0 +1,18 @@
+<package>
+  <description brief="HRP-2 10 optimized dynamics">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>Closed source</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+
+  <export>
+  </export>
+  <rosdep name="boost"/>
+  <depend package="abstract-robot-dynamics"/>
+  <depend package="jrl-mal"/>
+  <depend package="jrl-dynamics"/>
+</package>
