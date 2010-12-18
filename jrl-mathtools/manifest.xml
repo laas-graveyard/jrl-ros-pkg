@@ -1,0 +1,20 @@
+<package>
+  <description brief="JRL mathematical tools">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/jrl-mathtools</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/jrl-mathtools/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/jrl-mathtools.git"/>
+</package>
