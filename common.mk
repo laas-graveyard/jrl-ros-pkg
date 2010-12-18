@@ -16,13 +16,26 @@ JRL_MATHTOOLS=$(shell rospack find jrl-mathtools)/$(PKGCONFIGDIR)
 JRL_MAL=$(shell rospack find jrl-mal)/$(PKGCONFIGDIR)
 ABSTRACT_ROBOT_DYNAMICS=\
  $(shell rospack find abstract-robot-dynamics)/$(PKGCONFIGDIR)
+HRP2_DYNAMICS=\
+ $(shell rospack find hrp2-dynamics)/$(PKGCONFIGDIR)
+HRP2_10_OPTIMIZED=\
+ $(shell rospack find hrp2-10-optimized)/$(PKGCONFIGDIR)
+HRP2_14=\
+ $(shell rospack find hrp2-14)/$(PKGCONFIGDIR)
+HRP2_10=\
+ $(shell rospack find hrp2-10)/$(PKGCONFIGDIR)
 JRL_DYNAMICS=$(shell rospack find jrl-dynamics)/$(PKGCONFIGDIR)
 JRL_WALKGEN=$(shell rospack find jrl-walkgen)/$(PKGCONFIGDIR)
 DYNAMIC_GRAPH=$(shell rospack find dynamic-graph)/$(PKGCONFIGDIR)
 DG_MIDDLEWARE=$(shell rospack find dg-middleware)/$(PKGCONFIGDIR)
+SOT_CORE=$(shell rospack find sot-core)/$(PKGCONFIGDIR)
+SOT_DYNAMIC=$(shell rospack find sot-dynamic)/$(PKGCONFIGDIR)
+SOT_PATTERN_GENERATOR=$(shell rospack find sot-pattern-generator)/$(PKGCONFIGDIR)
+SOT_OPENHRP=$(shell rospack find sot-openhrp)/$(PKGCONFIGDIR)
+SOT_OPENHRP_SCRIPTS=$(shell rospack find sot-openhrp-scripts)/$(PKGCONFIGDIR)
 
 
-PKG_CONFIG_PATH=$(JRL_MATHTOOLS):$(JRL_MAL):$(ABSTRACT_ROBOT_DYNAMICS):$(JRL_DYNAMICS):$(JRL_WALKGEN):$(DYNAMIC_GRAPH):$(DG_MIDDLEWARE)
+PKG_CONFIG_PATH=$(JRL_MATHTOOLS):$(JRL_MAL):$(ABSTRACT_ROBOT_DYNAMICS):$(HRP2_14):$(HRP2_10):$(HRP2_DYNAMICS):$(HRP2_10_OPTIMIZED):$(JRL_DYNAMICS):$(JRL_WALKGEN):$(DYNAMIC_GRAPH):$(DG_MIDDLEWARE):$(SOT_CORE):$(SOT_DYNAMIC):$(SOT_PATTERN_GENERATOR):$(SOT_OPENHRP):$(SOT_OPENHRP_SCRIPTS)
 
 
 all: install
