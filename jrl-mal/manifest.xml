@@ -1,0 +1,21 @@
+<package>
+  <description brief="JRL matrix abstraction layer">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/jrl-mal</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/jrl-mal/doxygen/HEAD/index.html" />
+  </export>
+  <depend package="boost"/>
+  <rosdep name="jrl-mathtools"/>
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/jrl-mal.git"/>
+</package>
