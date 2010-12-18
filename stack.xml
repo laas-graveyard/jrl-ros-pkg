@@ -1,7 +1,12 @@
 <stack>
-  <description brief="dynamic_graph">dynamic_graph</description>
+  <description brief="dynamic_graph">
+
+    This stack gathers the HRP-2 control packages and its
+    dependencies.
+
+  </description>
   <author>Maintained by Thomas Moulard</author>
-  <license>BSD</license>  
+  <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/dynamic_graph</url>
   <depend stack="ros" />
