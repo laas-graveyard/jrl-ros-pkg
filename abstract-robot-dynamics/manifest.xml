@@ -1,0 +1,21 @@
+<package>
+  <description brief="LAAS robot dynamics interface">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/abstract-robot-dynamics</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://laas.github.com/abstract-robot-dynamics/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+  <depend package="jrl-mal"/>
+  <versioncontrol type="git"
+		  url="git://github.com/laas/abstract-robot-dynamics.git"/>
+</package>
