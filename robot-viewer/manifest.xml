@@ -14,7 +14,7 @@
        external=
        "http://laas.github.com/robot-viewer/doxygen/HEAD/index.html" />
   </export>
-
+  <rosdep name="git"/>
   <rosdep name="sphinx"/>
   <rosdep name="pyopengl"/>
 

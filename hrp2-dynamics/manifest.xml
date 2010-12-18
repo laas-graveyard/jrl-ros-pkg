@@ -11,6 +11,7 @@
 
   <export>
   </export>
+  <rosdep name="git"/>
   <rosdep name="boost"/>
   <depend package="abstract-robot-dynamics"/>
   <depend package="jrl-mal"/>

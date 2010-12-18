@@ -14,6 +14,7 @@
        external=
        "http://jrl-umi3218.github.com/sot-openhrp-scripts/doxygen/HEAD/index.html" />
   </export>
+  <rosdep name="git"/>
   <rosdep name="boost"/>
 
   <depend package="sot-openhrp"/>

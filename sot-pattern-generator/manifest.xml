@@ -14,6 +14,7 @@
        external=
        "http://jrl-umi3218.github.com/sot-pattern-generator/doxygen/HEAD/index.html" />
   </export>
+  <rosdep name="git"/>
   <rosdep name="boost"/>
 
   <depend package="jrl-walkgen"/>

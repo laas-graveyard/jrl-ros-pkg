@@ -6,3 +6,6 @@ pyopengl:
 
 sphinx:
   ubuntu: sphinx
+
+git:
+  ubuntu: git-core
