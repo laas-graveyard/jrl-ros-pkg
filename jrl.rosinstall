@@ -1,0 +1,4 @@
+- git:
+    uri: git://github.com/jrl-umi3218/jrl-ros-pkg.git
+    local-name: stacks/jrl
+    version: master
