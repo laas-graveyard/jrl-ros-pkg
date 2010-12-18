@@ -1,0 +1,25 @@
+<package>
+  <description brief="dynamic graph GUI">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sot-gui</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://laas.github.com/sot-gui/doxygen/HEAD/index.html" />
+  </export>
+
+  <rosdep name="sphinx"/>
+  <rosdep name="pyopengl"/>
+
+  <depend package="dg-middleware"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/laas/sot-gui.git"/>
+</package>
