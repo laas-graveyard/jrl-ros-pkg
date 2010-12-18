@@ -1,0 +1,25 @@
+<package>
+  <description brief="Dynamic graph CORBA bindings">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dg-middleware</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/dg-middleware/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+  <rosdep name="omniorb4"/>
+
+  <depend package="dynamic-graph"/>
+  <depend package="jrl-mal"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/dg-middleware.git"/>
+</package>
