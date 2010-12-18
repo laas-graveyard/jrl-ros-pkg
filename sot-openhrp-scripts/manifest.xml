@@ -1,0 +1,29 @@
+<package>
+  <description brief="Dynamic graph initialization scripts.">
+
+    FIXME
+
+  </description>
+  <author>See package AUTHORS file.</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sot-openhrp-scripts</url>
+
+  <export>
+    <rosdoc
+       external=
+       "http://jrl-umi3218.github.com/sot-openhrp-scripts/doxygen/HEAD/index.html" />
+  </export>
+  <rosdep name="boost"/>
+
+  <depend package="sot-openhrp"/>
+  <depend package="sot-dynamic"/>
+  <depend package="sot-pattern-generator"/>
+  <depend package="dynamic-graph"/>
+
+  <depend package="hrp2-10"/>
+  <depend package="hrp2-14"/>
+
+  <versioncontrol type="git"
+		  url="git://github.com/jrl-umi3218/sot-openhrp-scripts.git"/>
+</package>
