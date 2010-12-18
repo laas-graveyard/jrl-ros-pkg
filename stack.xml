@@ -1,0 +1,9 @@
+<stack>
+  <description brief="dynamic_graph">dynamic_graph</description>
+  <author>Maintained by Thomas Moulard</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dynamic_graph</url>
+  <depend stack="ros" />
+
+</stack>
