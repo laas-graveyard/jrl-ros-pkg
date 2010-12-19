@@ -15,7 +15,7 @@
        "http://jrl-umi3218.github.com/dg-middleware/doxygen/HEAD/index.html" />
   </export>
   <rosdep name="boost"/>
-  <rosdep name="omniorb4"/>
+  <rosdep name="omniORB4"/>
 
   <depend package="dynamic-graph"/>
   <depend package="jrl-mal"/>
