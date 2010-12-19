@@ -14,7 +14,7 @@ $(GIT_DIR):
 	cd $(GIT_DIR) && git checkout $(GIT_REVISION)
 	cd $(GIT_DIR) && git submodule init && git submodule update
 
-build:
+build: $(GIT_DIR)
 	 cd $(SRC_DIR) && python $(SRC_DIR)/setup.py build
 
 install: build
