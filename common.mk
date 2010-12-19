@@ -33,30 +33,14 @@ SOT_OPENHRP_SCRIPTS=$(shell rospack find sot-openhrp-scripts)/$(PKGCONFIGDIR)
 PKG_CONFIG_PATH=$(JRL_MATHTOOLS):$(JRL_MAL):$(ABSTRACT_ROBOT_DYNAMICS):$(HRP2_14):$(HRP2_10):$(HRP2_DYNAMICS):$(HRP2_10_OPTIMIZED):$(JRL_DYNAMICS):$(JRL_WALKGEN):$(DYNAMIC_GRAPH):$(DG_MIDDLEWARE):$(SOT_CORE):$(SOT_DYNAMIC):$(SOT_PATTERN_GENERATOR):$(SOT_OPENHRP):$(SOT_OPENHRP_SCRIPTS)
 
 
-LIBDIR=build/lib
-RPATHS=
-RPATHS+=-Wl,-rpath=$(shell rospack find jrl-mathtools)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find jrl-mal)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find abstract-robot-dynamics)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-10)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-14)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-dynamics)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-10-optimized)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find jrl-dynamics)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find jrl-walkgen)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find dynamic-graph)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find dg-middleware)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find sot-core)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find sot-dynamic)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find sot-pattern-generator)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find sot-openhrp)/$(BUILDDIR)
-RPATHS+=-Wl,-rpath=$(shell rospack find sot-openhrp-scripts)/$(BUILDDIR)
+LIBDIR=install/lib
+RPATHS =$(shell rospack find jrl-mathtools)/$(LIBDIR):$(shell rospack find jrl-mal)/$(LIBDIR):$(shell rospack find abstract-robot-dynamics)/$(LIBDIR):$(shell rospack find hrp2-10)/$(LIBDIR):$(shell rospack find hrp2-14)/$(LIBDIR):$(shell rospack find hrp2-dynamics)/$(LIBDIR):$(shell rospack find hrp2-10-optimized)/$(LIBDIR):$(shell rospack find jrl-dynamics)/$(LIBDIR):$(shell rospack find jrl-walkgen)/$(LIBDIR):$(shell rospack find dynamic-graph)/$(LIBDIR):$(shell rospack find dg-middleware)/$(LIBDIR):$(shell rospack find sot-core)/$(LIBDIR):$(shell rospack find sot-core)/install/lib/plugin:$(shell rospack find sot-dynamic)/$(LIBDIR):$(shell rospack find sot-dynamic)/install/lib/plugin:$(shell rospack find sot-pattern-generator)/$(LIBDIR):$(shell rospack find sot-pattern-generator)/install/lib/plugin:$(shell rospack find sot-openhrp)/$(LIBDIR):$(shell rospack find sot-openhrp)/install/lib/plugin:$(shell rospack find sot-openhrp-scripts)/$(LIBDIR):$(shell rospack find sot-openhrp-scripts)/install/lib/plugin
 
 CMAKE = cmake
 CMAKE_ARGS = -DCMAKE_INSTALL_PREFIX=$(INSTALL_DIR)/ \
              -DBOOST_ROOT=$(BOOST_ROOT)\
-	     -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-O2 -ggdb"\
-	     -DCMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO="$(RPATHS)"\
+	     -DCMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING="-O2 -ggdb"\
+	     -DCMAKE_INSTALL_RPATH:STRING="$(RPATHS)"\
              -DCMAKE_BUILD_TYPE="RelWithDebInfo"
 
 all: install
