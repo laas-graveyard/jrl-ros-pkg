@@ -5,11 +5,6 @@ INSTALL_DIR=$(shell pwd)/install
 
 BOOST_ROOT=$(shell rosboost-cfg --root)
 
-CMAKE = cmake
-CMAKE_ARGS = -DCMAKE_INSTALL_PREFIX=$(INSTALL_DIR)/ \
-             -DBOOST_ROOT=$(BOOST_ROOT)\
-             -DCMAKE_BUILD_TYPE="Release"
-
 PKGCONFIGDIR=install/lib/pkgconfig
 
 JRL_MATHTOOLS=$(shell rospack find jrl-mathtools)/$(PKGCONFIGDIR)
@@ -37,6 +32,32 @@ SOT_OPENHRP_SCRIPTS=$(shell rospack find sot-openhrp-scripts)/$(PKGCONFIGDIR)
 
 PKG_CONFIG_PATH=$(JRL_MATHTOOLS):$(JRL_MAL):$(ABSTRACT_ROBOT_DYNAMICS):$(HRP2_14):$(HRP2_10):$(HRP2_DYNAMICS):$(HRP2_10_OPTIMIZED):$(JRL_DYNAMICS):$(JRL_WALKGEN):$(DYNAMIC_GRAPH):$(DG_MIDDLEWARE):$(SOT_CORE):$(SOT_DYNAMIC):$(SOT_PATTERN_GENERATOR):$(SOT_OPENHRP):$(SOT_OPENHRP_SCRIPTS)
 
+
+LIBDIR=build/lib
+RPATHS=
+RPATHS+=-Wl,-rpath=$(shell rospack find jrl-mathtools)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find jrl-mal)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find abstract-robot-dynamics)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-10)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-14)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-dynamics)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find hrp2-10-optimized)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find jrl-dynamics)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find jrl-walkgen)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find dynamic-graph)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find dg-middleware)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find sot-core)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find sot-dynamic)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find sot-pattern-generator)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find sot-openhrp)/$(BUILDDIR)
+RPATHS+=-Wl,-rpath=$(shell rospack find sot-openhrp-scripts)/$(BUILDDIR)
+
+CMAKE = cmake
+CMAKE_ARGS = -DCMAKE_INSTALL_PREFIX=$(INSTALL_DIR)/ \
+             -DBOOST_ROOT=$(BOOST_ROOT)\
+	     -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-O2 -ggdb"\
+	     -DCMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO="$(RPATHS)"\
+             -DCMAKE_BUILD_TYPE="RelWithDebInfo"
 
 all: install
 
