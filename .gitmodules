@@ -1,6 +1,3 @@
-[submodule "dynamic-graph-bridge"]
-	path = dynamic-graph-bridge
-	url = git://github.com/jrl-umi3218/ros-dynamic_graph.git
 [submodule "dynamic_graph_bridge"]
 	path = dynamic_graph_bridge
 	url = git://github.com/jrl-umi3218/dynamic_graph_bridge-ros-pkg.git
